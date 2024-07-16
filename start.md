@@ -4,7 +4,7 @@
 
 **<span style="color:brown;">We have provided a batch of pre-written JSON files in the scripts folder, each containing different numbers of shards, numbers of shard nodes, and w parameters. For example, `11*40*0.3.json` indicates that this is a configuration file for 11 shards, where each shard contains 40 nodes and w = 0.3.</span>**
 
-2. Generate configuration files for each node by `./ours --method=generate --config=../scripts/11*40*0.3.json --root=./mytestnet`. You can replace the `config` field with any other JSON configuration file, and replace the `root` field with any output folder path you want (if the folder itself does not exist, a folder will be created).
+2. Generate configuration files for each node by `./ours --method=generate --config=../scripts/11+40+0.3.json --root=./mytestnet`. You can replace the `config` field with any other JSON configuration file, and replace the `root` field with any output folder path you want (if the folder itself does not exist, a folder will be created).
 
 3. After generating all files, you can find some directionaries named by IP addresses in your root directionary. Distribute these folders to their corresponding servers, and you can specify any location.
 
