@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "emulator/proto/ours/types";
+
+package ours.types;
+
+message ABCIExecutionReceipt {
+    int32 code = 1;
+    string log = 2;
+    string info = 3;
+    repeated string optionKey = 4;
+    repeated string optionValue = 5;
+}
+
