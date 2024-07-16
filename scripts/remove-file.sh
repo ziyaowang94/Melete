@@ -6,7 +6,7 @@ target_folder=$1
 # remove.sh
 
 for subfolder in "$target_folder"/*; do
-    if [ -d "$subfolder" ]; then  # 确保子文件夹是一个目录
+    if [ -d "$subfolder" ]; then 
         nodeName=$(basename $subfolder)
         rm -r $subfolder/database
         rm $subfolder/$nodeName-blocklogger-brief.txt

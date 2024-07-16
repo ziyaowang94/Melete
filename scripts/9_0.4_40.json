@@ -381,8 +381,7 @@
                 "i2",
                 "i3",
                 "i4",
-                "i5",
-                "i6"
+                "i5"
             ],
             "is_ishard": false,
             "key_range": "[b2,b3]"
@@ -391,19 +390,33 @@
             "chain_id": "b3",
             "peer_num": 40,
             "related_shards": [
+                "i1",
+                "i2",
+                "i3",
                 "i4",
-                "i5",
-                "i6"
+                "i5"
             ],
             "is_ishard": false,
             "key_range": "[b3,b4]"
+        },
+        {
+            "chain_id": "b4",
+            "peer_num": 40,
+            "related_shards": [
+                "i3",
+                "i4",
+                "i5"
+            ],
+            "is_ishard": false,
+            "key_range": "[b4,b5]"
         },
         {
             "chain_id": "i1",
             "peer_num": 40,
             "related_shards": [
                 "b1",
-                "b2"
+                "b2",
+                "b3"
             ],
             "is_ishard": true,
             "key_range": "[i1,i2]"
@@ -413,7 +426,8 @@
             "peer_num": 40,
             "related_shards": [
                 "b1",
-                "b2"
+                "b2",
+                "b3"
             ],
             "is_ishard": true,
             "key_range": "[i2,i3]"
@@ -423,7 +437,9 @@
             "peer_num": 40,
             "related_shards": [
                 "b1",
-                "b2"
+                "b2",
+                "b3",
+                "b4"
             ],
             "is_ishard": true,
             "key_range": "[i3,i4]"
@@ -433,7 +449,8 @@
             "peer_num": 40,
             "related_shards": [
                 "b3",
-                "b2"
+                "b2",
+                "b4"
             ],
             "is_ishard": true,
             "key_range": "[i4,i5]"
@@ -443,20 +460,11 @@
             "peer_num": 40,
             "related_shards": [
                 "b3",
-                "b2"
+                "b2",
+                "b4"
             ],
             "is_ishard": true,
             "key_range": "[i5,i6]"
-        },
-        {
-            "chain_id": "i6",
-            "peer_num": 40,
-            "related_shards": [
-                "b3",
-                "b2"
-            ],
-            "is_ishard": true,
-            "key_range": "[i6,i7]"
         }
     ]
 }
