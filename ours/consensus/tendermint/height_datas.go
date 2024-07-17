@@ -55,7 +55,6 @@ type HeightDataPackage struct {
 func (h *HeightDataPackage) IsIShard() bool { return h.ShardInfo.IsIShard() }
 func (h *HeightDataPackage) IsBShard() bool { return h.ShardInfo.IsBShard() }
 
-
 func NewHeightData(mychainid string, height int64, si *shardinfo.ShardInfo, sender *p2p.Sender) *HeightDataPackage {
 	h := new(HeightDataPackage)
 	h.Height, h.Round = height, 0
@@ -103,8 +102,6 @@ func (h *HeightDataPackage) SetShardInfo(s *shardinfo.ShardInfo) error {
 	}
 	return nil
 }
-
-
 
 func (h *HeightDataPackage) FinishProposal() bool {
 	if h.PassStep >= RoundStepPropose {
@@ -246,8 +243,6 @@ func (h *HeightDataPackage) FinishCrossShardCommit_B() bool {
 	return true
 }
 
-
-
 func (h *HeightDataPackage) clearProposal() {
 	h.Proposal = nil
 	delete(h.CrossShardPartSets, h.MyChainID)
@@ -286,8 +281,6 @@ func (h *HeightDataPackage) clearAll() {
 	h.clearPrecommit()
 	h.clearCrossShardData()
 }
-
-
 
 func (h *HeightDataPackage) AddProposal(p *constypes.Proposal, index int) error {
 	if h.Proposal != nil {
@@ -334,7 +327,7 @@ func (h *HeightDataPackage) addInnerPart(p *types.Part) error {
 			if err != nil {
 				return err
 			}
-			log.Printf("(height=%d)分片%s区块收集完毕\n", h.Height, p.ChainID)
+			log.Printf("(height=%d) Shard %s collected\n", h.Height, p.ChainID)
 			h.CrossShardBlocks[p.ChainID] = block
 		}
 	}

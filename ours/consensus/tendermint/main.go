@@ -325,7 +325,7 @@ func (cs *ConsensusState) doMessage(msg interface{}) error {
 		}
 		if err := cs.heightDatas.AddCrossShardAccept(m); err != nil {
 			if err == DoNothing {
-				log.Println("收到了CSA但是DONOTHING")
+				log.Println(" Received CSA but DONOTHING")
 				return nil
 			}
 			return err
@@ -349,8 +349,6 @@ func (cs *ConsensusState) doMessage(msg interface{}) error {
 	}
 }
 
-// 处理状态转换
-// 每次添加消息后都判断一次
 func (cs *ConsensusState) handleStateTransition() error {
 	switch cs.Step {
 	case RoundStepPropose:
@@ -359,7 +357,6 @@ func (cs *ConsensusState) handleStateTransition() error {
 			cs.doPropose()
 			cs.WriteLogger("Enter Prevote", false, false)
 		} else {
-			//fmt.Println("我没有完成Propose阶段")
 			return nil
 		}
 	case RoundStepPrevote:
@@ -411,7 +408,6 @@ func (cs *ConsensusState) calculateProposer() int {
 func (cs *ConsensusState) isProposer() bool {
 	return cs.calculateProposer() == cs.signerIndex
 }
-
 
 func (cs *ConsensusState) doPropose() {
 	proposalBlock := cs.heightDatas.CrossShardBlocks[cs.heightDatas.MyChainID]
@@ -789,7 +785,6 @@ func (cs *ConsensusState) createBlockAndBroadcast() {
 		resp := cs.abci.PreExecutionB(block)
 		block.CrossShardBody.CrossShardDatas = resp.CrossShardDatas
 	}
-
 
 	part_set := types.PartSetFromBlock(block, cs.MaxPartSize, cs.Round)
 	proposal := constypes.NewProposal(part_set.Header, cs.signerIndex, part_set.BlockHeaderHash)

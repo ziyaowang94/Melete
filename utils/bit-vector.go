@@ -27,7 +27,7 @@ func (bV *BitVector) Byte() []byte {
 		return NewBitVector(0).Byte()
 	}
 	buff := new(bytes.Buffer)
-	uselessBits := 8*len(bV.Elems) - bV.Bits // 实际位数 - 有效位数
+	uselessBits := 8*len(bV.Elems) - bV.Bits
 	if err := binary.Write(buff, binary.LittleEndian, int8(uselessBits)); err != nil {
 		panic(err)
 	}
