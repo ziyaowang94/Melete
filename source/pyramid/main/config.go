@@ -20,10 +20,14 @@ const (
 )
 
 const (
+	ProtocolPyramid = "pyramid"
+)
+
+const (
 	defaultMinBlockInterval = "10ms"
 	defaultMaxBlockPartSize = 1024 * 200 // 20 KB
 	defaultMaxBlockTxNum    = 4096
-	defaultProtocal         = "tendermint"
+	defaultProtocal         = ProtocolPyramid
 	defaultABCI             = "minibank"
 )
 
