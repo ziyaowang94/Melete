@@ -1,5 +1,5 @@
 
-TARGET_DIR := "./build"
+TARGET_DIR := "../build"
 
 install-dependencies:
 	@ echo "install dependencies"
