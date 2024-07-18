@@ -7,6 +7,6 @@ start_time=$2
 
 for subfolder in "$target_folder"/*; do
     if [ -d "$subfolder" ]; then  
-        (./ours --root="$subfolder" --start-time="$start_time" > "$subfolder"/.out 2>&1 &)
+        (./uranus --root="$subfolder" --start-time="$start_time" > "$subfolder"/.out 2>&1 &)
     fi
 done
