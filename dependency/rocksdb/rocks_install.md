@@ -1,5 +1,7 @@
 # rocksdb install manual
 
+> We use rocksdb as the storage backend.
+
 1. preparing the environment.
 
    ```bash

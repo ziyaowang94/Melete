@@ -4,6 +4,7 @@ TARGET_DIR := "../build"
 install-dependencies:
 	@ echo "install dependencies"
 	@ go mod tidy
+.PHONY: install-dependencies
 
 proto-gen:
 	@ echo "generate proto file"
@@ -77,6 +78,8 @@ build-store:
 .PHONY: build-all
 
 build-all: 
+	make install-dependencies
+	make proto-gen
 	make build-uranus
 	make build-uranus-latancy
 	make build-block-logger
