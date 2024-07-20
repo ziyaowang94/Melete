@@ -239,7 +239,7 @@ func createConsensus(cfg *Config, si *shardinfo.ShardInfo, s *signer.Signer, mmp
 
 	}
 	switch cfg.Protocal {
-	case "uranus":
+	case ProtocolUranus:
 		return uranus.NewConsensusState(
 			cfg.ChainID, si,
 			s, cfg.SignerIndex,

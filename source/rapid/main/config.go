@@ -20,10 +20,14 @@ const (
 )
 
 const (
+	ProtocolRapid = "rapid"
+)
+
+const (
 	defaultMinBlockInterval = "10ms"
-	defaultMaxBlockPartSize = 1024 * 300 // 20 KB
+	defaultMaxBlockPartSize = 1024 * 200 // 200 KB
 	defaultMaxBlockTxNum    = 4096
-	defaultProtocal         = "tendermint"
+	defaultProtocal         = ProtocolRapid
 	defaultABCI             = "minibank"
 )
 
@@ -65,7 +69,6 @@ func GenerateConfigFiles(shard_config_path string, store_dir string) {
 	}
 	bnum, inum := 0, 0
 
-
 	IPPortToUse := map[string]int{}
 	IPs := []string{}
 	IPGun := []string{}
@@ -97,7 +100,6 @@ func GenerateConfigFiles(shard_config_path string, store_dir string) {
 		return theip, theport
 	}
 
-
 	totalNodes := 0
 	for _, si := range shardConfig.Shards {
 		totalNodes += int(si.PeerNum)
@@ -107,7 +109,6 @@ func GenerateConfigFiles(shard_config_path string, store_dir string) {
 			bnum++
 		}
 	}
-
 
 	publicKeys := make([]string, totalNodes)
 	privateKeys := make([]string, totalNodes)
@@ -122,7 +123,6 @@ func GenerateConfigFiles(shard_config_path string, store_dir string) {
 		privateKeys[i] = priveKey
 		ipList[i], portList[i] = GetIP()
 	}
-
 
 	PeerRelatedMap := make(map[string][]string)
 	PeerList := make(map[string][]*p2p.Peer)
@@ -162,7 +162,6 @@ func GenerateConfigFiles(shard_config_path string, store_dir string) {
 		}
 	}
 
-
 	configList := make([]*Config, totalNodes)
 	count = 0
 	for _, si := range shardConfig.Shards {
@@ -194,7 +193,6 @@ func GenerateConfigFiles(shard_config_path string, store_dir string) {
 		}
 	}
 
-	
 	for i, cfg := range configList {
 		if err := os.MkdirAll(cfg.StoreDirRoot(), os.ModePerm); err != nil {
 			panic(err)

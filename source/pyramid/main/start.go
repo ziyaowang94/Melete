@@ -237,7 +237,7 @@ func createConsensus(cfg *Config, si *shardinfo.ShardInfo, s *signer.Signer, mmp
 
 	}
 	switch cfg.Protocal {
-	case "pbft":
+	case ProtocolPyramid:
 		return pyramid.NewConsensusState(
 			cfg.ChainID, si,
 			s, cfg.SignerIndex,
