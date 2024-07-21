@@ -39,7 +39,7 @@ We provide pre-compiled binaries to run the tests, you can also build from sourc
 
 ### run with binaries (only need rocksdb)
 
-How to run Uranus and experiment can be found in [run.md](/scripts/run.md), all the need scripts is placed in `/scripts`.
+How to run Uranus and experiment can be found in [run.md](./scripts/run.md), all the need scripts is placed in `/scripts`.
 
 ### build from source (need all Prerequisites)
 
