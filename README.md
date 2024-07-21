@@ -39,8 +39,8 @@ We provide pre-compiled binaries to run the tests, you can also build from sourc
 
 ### run with binaries (only need rocksdb)
 
-How to run Uranus and experiment can be found in [run.md](./scripts/run.md), all the need scripts is placed in `/scripts`.
+How to run Uranus and experiment can be found in [run.md](./scripts/run.md), all the need scripts is placed in `./scripts`.
 
 ### build from source (need all Prerequisites)
 
-Enter the `source` directory and run `make build-all`, all the binaries will be palced in the `build` directory.
+Install all prerequisites, then enter the `source` folder and run `make build-all`, all the binaries will be palced in the `build` folder.
