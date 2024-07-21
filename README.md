@@ -29,7 +29,7 @@ Follow the manual [rocks_install.md](./dependency/rocksdb/rocks_install.md).
 
 Follow the offical manual [https://go.dev/doc/install](https://go.dev/doc/install).
 
-## Install proto-go (need for build)
+### Install proto-go (need for build)
 
 Follow the manual [proto_install.md](./dependency/proto/proto_install.md).
 
