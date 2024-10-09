@@ -5,7 +5,7 @@ import (
 
 	protop2p "emulator/proto/utils/p2p"
 
-	"emulator/uranus/types"
+	"emulator/melete/types"
 )
 
 type Peer struct {

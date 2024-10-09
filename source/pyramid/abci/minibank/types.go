@@ -2,7 +2,7 @@ package minibank
 
 import (
 	"bytes"
-	bank "emulator/proto/uranus/abci/minibank"
+	bank "emulator/proto/melete/abci/minibank"
 	"emulator/pyramid/definition"
 	"emulator/pyramid/types"
 	"emulator/utils"

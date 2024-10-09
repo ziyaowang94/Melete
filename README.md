@@ -1,8 +1,8 @@
-# Uranus: A Layered and Integrated Sharding Blockchain System
+# Melete: A Layered and Integrated Sharding Blockchain System
 
 ## Introduction
 
-This repository contains the source code of the Uranus prototype system and implementations of other consensus protocols for comparison.
+This repository contains the source code of the Melete prototype system and implementations of other consensus protocols for comparison.
 
 ## Folder structure
 
@@ -39,7 +39,7 @@ We provide pre-compiled binaries to run the tests, you can also build from sourc
 
 ### run with binaries (only need rocksdb)
 
-How to run Uranus and experiment can be found in [run.md](/scripts/run.md), all the need scripts is placed in `/scripts`.
+How to run Melete and experiment can be found in [run.md](/scripts/run.md), all the need scripts is placed in `/scripts`.
 
 ### build from source (need all Prerequisites)
 

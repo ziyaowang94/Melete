@@ -2,7 +2,7 @@ package utils
 
 import (
 	"bytes"
-	"emulator/proto/uranus/abci/minibank"
+	"emulator/proto/melete/abci/minibank"
 	"fmt"
 	"log"
 

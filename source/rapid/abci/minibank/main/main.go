@@ -19,7 +19,7 @@ func getLastFolderName(path string) string {
 	return filepath.Base(path)
 }
 func main() {
-	// ./uranus-latency ./mytestnet/127.0.0.1/node1  b1
+	// ./melete-latency ./mytestnet/127.0.0.1/node1  b1
 	rootPath := os.Args[1]
 	storePath := path.Join(rootPath, "database")
 	nodeName := getLastFolderName(rootPath)
