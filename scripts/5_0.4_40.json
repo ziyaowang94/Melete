@@ -203,7 +203,7 @@
     },
     "shards": [
         {
-            "chain_id": "b1",
+            "chain_id": "c1",
             "peer_num": 40,
             "related_shards": [
                 "i1",
@@ -211,10 +211,10 @@
                 "i3"
             ],
             "is_ishard": false,
-            "key_range": "[b1,b2]"
+            "key_range": "[c1,c2]"
         },
         {
-            "chain_id": "b2",
+            "chain_id": "c2",
             "peer_num": 40,
             "related_shards": [
                 "i1",
@@ -222,14 +222,14 @@
                 "i3"
             ],
             "is_ishard": false,
-            "key_range": "[b2,b3]"
+            "key_range": "[c2,c3]"
         },
         {
             "chain_id": "i1",
             "peer_num": 40,
             "related_shards": [
-                "b1",
-                "b2"
+                "c1",
+                "c2"
             ],
             "is_ishard": true,
             "key_range": "[i1,i2]"
@@ -237,8 +237,8 @@
             "chain_id": "i2",
             "peer_num": 40,
             "related_shards": [
-                "b1",
-                "b2"
+                "c1",
+                "c2"
             ],
             "is_ishard": true,
             "key_range": "[i2,i3]"
@@ -246,8 +246,8 @@
             "chain_id": "i3",
             "peer_num": 40,
             "related_shards": [
-                "b1",
-                "b2"
+                "c1",
+                "c2"
             ],
             "is_ishard": true,
             "key_range": "[i3,i4]"
