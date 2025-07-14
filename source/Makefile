@@ -17,19 +17,19 @@ proto-clean:
 	@ find ./proto -type f -name "*.pb.go" -delete
 .PHONY: proto-clean
 
-build-uranus:
-	@ echo "Building uranus..."
-	@ cd uranus/main && go build
+build-melete:
+	@ echo "Building melete..."
+	@ cd melete/main && go build
 	@ echo "move to $(TARGET_DIR)"
-	@ mv uranus/main/main $(TARGET_DIR)/uranus
-.PHONY: build-uranus
+	@ mv melete/main/main $(TARGET_DIR)/melete
+.PHONY: build-melete
 
-build-uranus-latancy:
-	@ echo "Building uranus latency..."
-	@ cd uranus/abci/minibank/main && go build
+build-melete-latancy:
+	@ echo "Building melete latency..."
+	@ cd melete/abci/minibank/main && go build
 	@ echo "move to $(TARGET_DIR)"
-	@ mv uranus/abci/minibank/main/main $(TARGET_DIR)/uranus-latency
-.PHONY: build-uranus-latancy
+	@ mv melete/abci/minibank/main/main $(TARGET_DIR)/melete-latency
+.PHONY: build-melete-latancy
 
 build-block-logger:
 	@ echo "Building block-logger..."
@@ -80,8 +80,8 @@ build-store:
 build-all: 
 	make install-dependencies
 	make proto-gen
-	make build-uranus
-	make build-uranus-latancy
+	make build-melete
+	make build-melete-latancy
 	make build-block-logger
 	make build-pyramid
 	make build-pyramid-latancy

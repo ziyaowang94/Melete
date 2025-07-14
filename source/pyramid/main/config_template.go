@@ -9,7 +9,7 @@ import (
 
 const ConfigTOML = `
 # ===================================================
-#              Config of uranus Model
+#              Config of Pyramid Model
 # ===================================================
 
 node_name = "{{.NodeName}}"
@@ -43,13 +43,11 @@ signer_index       = {{.SignerIndex}}
 abci_app = "{{.ABCIApp}}"
 `
 
-
 func (cfg *Config) StoreConfig(path string) error {
 	t, err := template.New("config").Parse(ConfigTOML)
 	if err != nil {
 		return err
 	}
-
 
 	f, err := os.Create(path)
 	if err != nil {
@@ -60,7 +58,6 @@ func (cfg *Config) StoreConfig(path string) error {
 	return t.Execute(f, cfg)
 }
 
-
 func GetConfig(path string) (*Config, error) {
 
 	viper.SetConfigFile(path)
@@ -68,7 +65,6 @@ func GetConfig(path string) (*Config, error) {
 	if err != nil {
 		panic(err)
 	}
-
 
 	return &Config{
 		NodeName: viper.GetString("node_name"),

@@ -9,7 +9,7 @@ import (
 
 const ConfigTOML = `
 # ===================================================
-#              Config of uranus Model
+#              Config of melete Model
 # ===================================================
 
 node_name = "{{.NodeName}}"
